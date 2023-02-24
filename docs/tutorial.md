@@ -26,6 +26,6 @@ provided to `project_slug`.
 Make sure docker is already up and usable.
 Go into your project directory and :
 
-Rename `.env.example` to `.env`
-Start `docker compose up --build`
-vist `localhost:8000/schema/swagger`
+- Rename `.env.example` to `.env`
+- Start `docker compose up --build`
+- vist `localhost:8000/schema/swagger`
