@@ -915,15 +915,8 @@ hue-6-2: #e6c07b
         
     </head>
     <body class="vscode-body vscode-dark">
-        <p>{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}</p>
+        <p>t p{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}</p>
 <h1 id="-cookiecutterproject_name-">{{ cookiecutter.project_name }}</h1>
-<p>{% if is_open_source %}
-[![pypi](<a href="https://img.shields.io/pypi/v/">https://img.shields.io/pypi/v/</a>{{ cookiecutter.project_slug }}.svg)](<a href="https://pypi.org/project/">https://pypi.org/project/</a>{{ cookiecutter.project_slug }}/)
-[![python](<a href="https://img.shields.io/pypi/pyversions/">https://img.shields.io/pypi/pyversions/</a>{{ cookiecutter.project_slug }}.svg)](<a href="https://pypi.org/project/">https://pypi.org/project/</a>{{ cookiecutter.project_slug }}/)
-[![Build Status](<a href="https://github.com/">https://github.com/</a>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/dev.yml/badge.svg)](<a href="https://github.com/">https://github.com/</a>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions/workflows/dev.yml)
-[![codecov](<a href="https://codecov.io/gh/">https://codecov.io/gh/</a>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/main/graphs/badge.svg)](<a href="https://codecov.io/github/">https://codecov.io/github/</a>{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})</p>
-<p>{% else %}
-{% endif %}</p>
 <p>{{ cookiecutter.project_short_description }}</p>
 <p>{% if is_open_source %}</p>
 <ul>
