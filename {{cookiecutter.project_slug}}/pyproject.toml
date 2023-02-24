@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+description = "{{ cookiecutter.project_short_description }}."
+authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
+readme = "README.md"
+packages = [{include = "app" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "~=3.11.0"
+aiosmtplib = "*"
+alembic = "*"
+asyncpg = "*"
+httpx = "*"
+pydantic = "*"
+redis = "*"
+saq = "*"
+sentry-sdk = "*"
+sqlalchemy = ">=2.0.0"
+starlite = { version = "~=1.51.5", extras = ["redis","jwt","cli"] }
+uvicorn = { extras = ["standard"], version = "*" }
+uvloop = "*"
+starlite-saqlalchemy = "^0.29.0"
+
+[tool.poetry.group.testing]
+optional = true
+
+[tool.poetry.group.testing.dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-dotenv = "*"
+starlite = { extras = ["testing"], version = "~=1.51.5" }
+
+[tool.poetry.group.coverage]
+optional = true
+
+[tool.poetry.group.coverage.dependencies]
+pytest-cov = "*"
+
+[tool.poetry.group.integration]
+optional = true
+
+[tool.poetry.group.integration.dependencies]
+pytest-docker = "*"
+docker-compose = "*"
+
+[tool.poetry.group.linting]
+optional = true
+
+[tool.poetry.group.linting.dependencies]
+pre-commit = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    'if TYPE_CHECKING:',
+    'pragma: no cover',
+    "if __name__ == '__main__':",
+]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+env_files = [".env.example"]
+testpaths = ["tests/unit"]
+
+[tool.pylint.MESSAGE_CONTROL]
+disable = [
+    "cyclic-import",
+    "duplicate-code",
+    "invalid-name",
+    "line-too-long",
+    "missing-class-docstring",
+    "missing-module-docstring",
+    "too-few-public-methods",
+]
+enable = "useless-suppression"
+extension-pkg-allow-list = ["pydantic", "asyncpg.pgproto.pgproto", "orjson"]
+
+[tool.pylint.VARIABLES]
+ignored-argument-names = "args|kwargs|_|__"
+
+[tool.pylint.BASIC]
+good-names = "_,__,i,e,k,v,fn,get,post,put,patch,delete,route,asgi,websocket,Dependency,Body,Parameter"
+# Regular expression which should only match function or class names that do
+# not require a docstring.
+no-docstring-rgx="(__.*__|main|test.*|.*test|.*Test|^_.*)$"
+
+[tool.pylint.REPORTS]
+reports = "no"
+
+[tool.pylint.FORMAT]
+max-line-length = "120"
+
+[tool.pylint.LOGGING]
+# Logging modules to check that the string format arguments are in logging
+# function parameter format
+logging-modules=["logging"]

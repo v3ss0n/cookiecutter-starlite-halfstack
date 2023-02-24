@@ -1,0 +1,32 @@
+{
+    "project_name": "starlite-halfstack-saqsa-cookiecutter",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "pkg_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Cookiercutter for Starlite SAQ+SQLalchemy Starter , Migrations with Alembic and Composed With Docker Compose",
+    "full_name": "Phyo Arkar Lwin",
+    "email": "phyoakl@hexcode.tech",
+    "github_username": "v3ss0n",
+    "version": "0.1.0",
+    "command_line_interface": [
+        "Click"
+    ],
+    "open_source_license": [
+        "MIT",
+        "BSD-3-Clause",
+        "ISC",
+        "Apache-2.0",
+        "GPL-3.0-only",
+        "Not open source"
+    ],
+    "docstrings_style": [
+        "google",
+        "numpy",
+        "pep257"
+    ],
+    "_copy_without_render": [
+        "docs/changelog.md",
+        "docs/contributing.md",
+        "docs/index.md",
+        ".github/workflows/*.yml"
+    ]
+}

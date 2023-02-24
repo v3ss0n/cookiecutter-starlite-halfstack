@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# - runs Alembic migrations
+# - starts Starlite application
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+echo Running migrations...
+alembic upgrade head
+
+echo Starting Starlite App...
+uvicorn app.app:app

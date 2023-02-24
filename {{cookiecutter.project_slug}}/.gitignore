@@ -1,0 +1,14 @@
+__pycache__/
+.idea/
+.mypy_cache/
+.pytest_cache/
+.tox/
+.vscode/
+.env*
+!.env.example
+.coverage
+.dmypy.json
+.DS_Store
+.python-version
+.venv
+venv
