@@ -1,4 +1,4 @@
-# Cookiecutter PyPackage
+# Cookiecutter For Starlite + SAQ + Sqlalchemy + Docker
 
 This is starter with cookiecutter for Starlite and much simpler version of <https://github.com/starlite-api/starlite-pg-redis-docker> , using peter's <https://github.com/topsport-com-au/starlite-saqlalchemy>
 
