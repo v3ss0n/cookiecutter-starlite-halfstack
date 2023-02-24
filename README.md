@@ -12,7 +12,6 @@ conform to best practice.
 
 This tool will create Python project with the following features:
 
-
 ## Quickstart
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
@@ -24,7 +23,7 @@ pip install -U cookiecutter
 Generate a Python package project:
 
 ```
-cookiecutter https://github.com/waynerv/cookiecutter-pypackage.git
+cookiecutter https://github.com/v3ss0n/starlite-halfstack-saqsa-cookiecutter
 ```
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
