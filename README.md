@@ -10,8 +10,7 @@ conform to best practice.
 
 ## Features
 
-This tool will create Python project with the following features:
-
+This is starter with cookiecutter for Starlite and much simpler version of https://github.com/starlite-api/starlite-pg-redis-docker , using peter's https://github.com/topsport-com-au/starlite-saqlalchemy
 
 ## Quickstart
 
