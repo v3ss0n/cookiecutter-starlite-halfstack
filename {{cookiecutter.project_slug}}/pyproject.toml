@@ -22,7 +22,7 @@ sqlalchemy = ">=2.0.0"
 starlite = { version = "~=1.51.5", extras = ["redis","jwt","cli"] }
 uvicorn = { extras = ["standard"], version = "*" }
 uvloop = "*"
-starlite-saqlalchemy = "^0.29.0"
+starlite-saqlalchemy = { version = ">=0.29", extras = ["all"] }
 
 [tool.poetry.group.testing]
 optional = true
