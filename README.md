@@ -25,7 +25,7 @@ Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
 - Alembic support For data Migrations
 - Background Processing using SAQ
 - Moked Mail Sending and Reciving with MailHog
-- Fully running inside Docker Containers
+- Fully running inside Docker Containers vid docker-compose
 
 
 
