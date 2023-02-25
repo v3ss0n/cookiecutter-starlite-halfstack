@@ -31,4 +31,10 @@ Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
 
 # Credits
 
-This repo is forked from [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), which originally forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
+[starlite-pg-redis-docker](https://github.com/starlite-api/starlite-pg-redis-docker)
+
+[starlite-saqlalchemy](https://github.com/topsport-com-au/starlite-saqlalchemy)
+
+
+Cookiecutter template is forked from [zillionare/python-project-wizard](https://github.com/zillionare/python-project-wizard), 
+which originally forked from [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
