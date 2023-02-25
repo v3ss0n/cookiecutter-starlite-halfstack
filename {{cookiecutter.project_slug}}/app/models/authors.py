@@ -32,7 +32,7 @@ class Service(RepositoryService[Author]):
         await enqueue_background_task_for_service(
             self,
             "send_author_created_email",
-            message_content="Author Created , check the mailhog ui",
+            message_content=f"Author Created: {data.name} , check the mailhog ui",
         )
         return created
 
