@@ -26,6 +26,13 @@ class Service(RepositoryService[Author]):
 
     repository_type = Repository
 
+    async def create(self, data: Author) -> Author:
+        created = await super().create(data)
+        await self.enqueue_background_task(
+            "send_author_created_email", raw_author=ReadDTO.from_orm(created).dict()
+        )
+        return created
+
     @staticmethod
     async def send_author_created_email(message_content: str) -> None:
         """Sends an email to alert that a new `Author` has been created.
