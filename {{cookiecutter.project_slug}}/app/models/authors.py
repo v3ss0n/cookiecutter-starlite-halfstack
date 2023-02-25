@@ -10,6 +10,7 @@ from starlite_saqlalchemy import dto
 from app.modules import email
 from app import settings
 from starlite_saqlalchemy.worker import queue
+from starlite_saqlalchemy.worker import enqueue_background_task_for_service
 
 
 class Author(db.orm.AuditBase):
@@ -28,8 +29,10 @@ class Service(RepositoryService[Author]):
 
     async def create(self, data: Author) -> Author:
         created = await super().create(data)
-        await self.enqueue_background_task(
-            "send_author_created_email", raw_author=ReadDTO.from_orm(created).dict()
+        await enqueue_background_task_for_service(
+            self,
+            "send_author_created_email",
+            message_content="Author Created , check the mailhog ui",
         )
         return created
 
