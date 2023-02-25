@@ -1,4 +1,4 @@
-# Simplified Stater with Cookiecutter For Starlite + SAQ + Sqlalchemy + Docker
+# Simplified stater with Cookiecutter For Starlite + SAQ + Sqlalchemy + Docker
 
 This is starter with cookiecutter for Starlite.
 It is much simpler version of <https://github.com/starlite-api/starlite-pg-redis-docker> 
