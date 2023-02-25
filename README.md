@@ -1,6 +1,8 @@
 # Cookiecutter For Starlite + SAQ + Sqlalchemy + Docker
 
-This is starter with cookiecutter for Starlite and much simpler version of <https://github.com/starlite-api/starlite-pg-redis-docker> , using peter's <https://github.com/topsport-com-au/starlite-saqlalchemy>
+This is starter with cookiecutter for Starlite.
+It is much simpler version of <https://github.com/starlite-api/starlite-pg-redis-docker> 
+Built on top of peter's <https://github.com/topsport-com-au/starlite-saqlalchemy>
 
 ## Quickstart
 
@@ -17,6 +19,15 @@ cookiecutter https://github.com/v3ss0n/starlite-halfstack-cookiecutter
 ```
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
+
+## Features
+- Easy to use ORM provided by starlite-saqlalchemy
+- Alembic support For data Migrations
+- Background Processing using SAQ
+- Moked Mail Sending and Reciving with MailHog
+- Fully running inside SQLAlchemy
+
+
 
 # Credits
 
