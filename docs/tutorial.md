@@ -28,4 +28,4 @@ Go into your project directory and :
 
 - Rename `.env.example` to `.env`
 - Start `docker compose up --build`
-- vist `localhost:8000/schema/swagger`
+- visit `localhost:8000/schema/swagger`
