@@ -6,7 +6,7 @@ description = "Cookiecutter template for starlite starter"
 license = "BSD-3-Clause"
 authors = ["Phyo Arkar Lwin <phyoakl@hexcode.tech>"]
 readme = "README.md"
-repository = "https://github.com/v3ss0n/starlite-halfstack-cookiecutter"
+repository = "https://github.com/v3ss0n/cookiecutter-starlite-halfstack"
 documentation = ""
 keywords = ['cookiecutter', 'template', 'package']
 
