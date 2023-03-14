@@ -15,7 +15,8 @@ pip install -U cookiecutter
 Generate a Python package project:
 
 ```
-cookiecutter https://github.com/v3ss0n/starlite-halfstack-cookiecutter
+cookiecutter https://github.com/v3ss0n/cookiecutter-starlite-halfstack
+
 ```
 
 Then follow **[Tutorial](docs/tutorial.md)** to finish other configurations.
